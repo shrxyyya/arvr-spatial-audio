@@ -1,27 +1,34 @@
+/* Root styles for the entire application */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /* Allow the system to choose between light and dark color schemes */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
+  font-synthesis: none; /* Prevent automatic font synthesis */
+  text-rendering: optimizeLegibility; /* Optimize text rendering for better legibility */
+  -webkit-font-smoothing: antialiased; /* Improve font smoothing for webkit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improve font smoothing for Firefox on macOS */
 }
 
+/* Styles for anchor links */
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
+/* Hover state for links */
 a:hover {
   color: #535bf2;
 }
 
+/* Base styles for the body */
 body {
   margin: 0;
   display: flex;
@@ -30,11 +37,13 @@ body {
   min-height: 100vh;
 }
 
+/* Styles for main headings (h1) */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* Styles for buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -46,22 +55,30 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+/* Hover state for buttons */
 button:hover {
   border-color: #646cff;
 }
+
+/* Focus styles for buttons */
 button:focus,
 button:focus-visible {
+  /* Outline for accessibility */
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Media query for light color scheme preference */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+  /* Hover state for links in light mode */
   a:hover {
     color: #747bff;
   }
+  /* Button background color in light mode */
   button {
     background-color: #f9f9f9;
   }
